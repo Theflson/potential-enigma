@@ -1,14 +1,143 @@
-{
-  "name": "static-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+
+
+    ("uindex.htpml")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    potentia-ai-vision/
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    ├── assets/
+    │   └── potentia-logo.svg
+    ├── style.css
+├── script.js
+├── assets/
+│   └── potentia-logo.svg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Potentia AI Vision Boot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="boot-screen">
+    <img src="assets/potentia-logo.svg" alt="Potentia Logo" class="logo" />
+    <h1>Booting Potentia AI Vision...</h1>
+    <div class="loader"></div>
+  </div>
+
+  <div id="main-ui" class="hidden">
+    <header>
+      <img src="assets/potentia-logo.svg" class="logo-small" />
+      <h2>Welcome to Potentia AI Vision</h2>
+    </header>
+
+    <section id="environment-select">
+      <h3>Select Immersive Environment</h3>
+      <button onclick="loadEnvironment('Tokyo Future Core')">Tokyo Future Core</button>
+      <button onclick="loadEnvironment('Tampa Riverwalk')">Tampa Riverwalk</button>
+      <button onclick="loadEnvironment('Deep Space Nexus')">Deep Space Nexus</button>
+    </section>
+
+    <section id="avatar-config">
+      <h3>Avatar Preferences</h3>
+      <input type="text" placeholder="Enter avatar name" />
+      <select>
+        <option>Style: Futuristic</option>
+        <option>Style: Minimalist</option>
+        <option>Style: Classic Elegance</option>
+      </select>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+#boot-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: fadeOut 3s forwards;
+  animation-delay: 4s;
+}
+
+.logo {
+  width: 120px;
+  animation: glow 2s infinite alternate;
+}
+
+.loader {
+  margin-top: 20px;
+  border: 4px solid #fff;
+  border-top: 4px solid #00f0ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+#main-ui.hidden {
+  display: none;
+}
+
+#main-ui {
+  padding: 30px;
+  background: linear-gradient(to right, #101010, #1f1f1f);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-small {
+  width: 50px;
+}
+
+button {
+  background: #00f0ff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 5px #00f0ff); }
+  to { filter: drop-shadow(0 0 15px #00f0ff); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById("boot-screen").style.display = "none";
+    document.getElementById("main-ui").classList.remove("hidden");
+  }, 4500);
+};
+
+function loadEnvironment(name) {
+  alert(`Loading immersive environment: ${name}`);
+  // Later: replace with live Unreal Engine stream or 3D viewer logic
 }
