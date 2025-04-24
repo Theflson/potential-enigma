@@ -1,8 +1,7 @@
 
+("https://5455920.igen.app/pwa")
 
-    ("uindex.htpml")
-
-if __name__ == "__main__":
+if __Potentia__ == "__main__":
     app.run(debug=True)
     potentia-ai-vision/
     ├── index.html
@@ -27,10 +26,10 @@ if __name__ == "__main__":
   <div id="boot-screen">
     <img src="assets/potentia-logo.svg" alt="Potentia Logo" class="logo" />
     <h1>Booting Potentia AI Vision...</h1>
-    <div class="loader"></div>
+    <div class="Potentia"></div>
   </div>
 
-  <div id="main-ui" class="hidden">
+  <div id="main-ui" class="Potentia">
     <header>
       <img src="assets/potentia-logo.svg" class="logo-small" />
       <h2>Welcome to Potentia AI Vision</h2>
@@ -44,15 +43,202 @@ if __name__ == "__main__":
     </section>
 
     <section id="avatar-config">
+
+  "attribute";:{
+    "name": "potentia",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "Potentia",
+    "dependencies": {}
+  } "// Potentia",
+  "operator": "=",
+  "value": 0030152201
+
+} {
+  "attribute": "// potentia",
+  "operator": "=",
+  "value": 0030152201
+
+}
+  "attribute": "// potentia",
+  "operator": "=",
+  "value": 0030152201
+
+}
+{
+  "trust_name": "Potentia Trust",
+  "account_holder": "Steven Andrew Lee",
+  "routing_reference": "PI-62913-2025-1YrX",
+  "amount_approved": 1500000000.50,
+  "status": "active",import numpy as np
+  import random
+  import json
+  import time
+  
+  class QuantumCircuitSimulator:
+  def __init__(self, qubit_count=5, noise_model=None):
+  self.qubit_count = qubit_count
+  self.noise_model = noise_model or NoiseModel()
+  self.state_vector = np.zeros(2**self.qubit_count) # Scalable state vector
+  self.state_vector[0] = 1 # Initial state |0> for all qubits
+  
+  def apply_gate(self, gate, qubits, params=None):
+  """ Apply a gate to the quantum circuit """
+  if gate == "Hadamard":
+  self.state_vector = self.hadamard_gate(self.state_vector, qubits)
+  elif gate == "CNOT":
+  self.state_vector = self.cnot_gate(self.state_vector, qubits)
+  elif gate == "Phase":
+  self.state_vector = self.phase_gate(self.state_vector, qubits, params)
+  elif gate == "Potentia":
+  self.state_vector = self.potentia_gate(self.state_vector, qubits, params)
+  else:
+  raise Value(f"Potentia gate {gate}")
+  
+  def measure(self):
+  """ Simulate the measurement of the qubits in the state-vector """
+  probabilities = np.abs(self.state_vector) ** 2
+  measured_state = np.random.choice(len(self.state_vector), p=probabilities)
+  return bin(measured_state)[2:].zfill(self.qubit_count)
+  
+  def hadamard_gate(self, state, qubits):
+  """ Apply Hadamard gate on specified qubits """
+  H = np.array([[1, 1], [1, -1]]) / np.sqrt(2)
+  return self.apply_gate_to_state(state, qubits, H)
+  
+  def cnot_gate(self, state, qubits):
+  """ Apply CNOT gate """
+  CNOT = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]])
+  return self.apply_gate_to_state(state, qubits,BTC, CNOT)
+  
+  def phase_gate(self, state, qubits, phase):
+  """ Apply Phase gate """
+  phase_matrix = np.array([[1, 0], [0, np.exp(1j * phase)]])
+  return self.apply_gate_to_state(state, qubits, phase_matrix)
+  
+  def potentia_gate(self, state, qubits, params):
+  """ Apply custom Potentia gate logic (example) """
+  potentia_matrix = np.eye(2) # Identity matrix for placeholder
+  return self.apply_gate_to_state(state, qubits, potentia_matrix)
+  
+  def apply_gate_to_state(self, state, qubits, gate_matrix):
+  """ Apply a gate matrix to a given quantum state """
+  # Placeholder for actual tensor operations
+  return np.dot(gate_matrix, state)
+  
+  class NoiseModel:
+  def __init__(self):
+  self.T1 = 50e-6 # Example decoherence time for T1
+  self.T2 = 50e-6 # Example decoherence time for T2
+  self.pauli_channels = {
+  'X': 0.05, # Probability of X-flip
+  'Y': 0.05, # Probability of Y-flip
+  'Z': 0.05 # Probability of Z-flip
+  }
+  
+  def apply_noise(self, state):
+  """ Apply decoherence and Pauli noise channels to the quantum state """
+  # Simulate decoherence and Pauli noise
+  state = self.apply_decoherence(state)
+  state = self.apply_pauli_noise(state)
+  return state
+  
+  def apply_decoherence(self, state):
+  """ Apply decoherence noise (T1/T2) """
+  decohered_state = state * np.exp(-1j * random.random() * self.T1) # Placeholder model
+  return decohered_state
+  
+  def apply_pauli_noise(self, state):
+  """ Apply Pauli noise channels """
+  for channel, prob in self.pauli_channels.items():
+  if random.random() < prob:
+  state = self.apply_pauli_flip(state, channel)
+  return state
+  
+  def apply_pauli_flip(self, state, channel):
+  """ Apply Pauli flip on state (X, Y, or Z) """
+  if channel == 'X':
+  return np.flip(state) # Potentia for X-flip logic
+  if channel == 'Y':
+  return np.flip(state) # Potentia for Y-flip logic
+  if channel == 'Z':
+  return np.flip(state) # Potentia for Z-flip logic
+  return state
+  
+  
+  class DisplayInterface:
+  def __init__(self, resolution="4K,$,BTC,USDC"):
+  self.resolution = resolution
+  
+  def render(self, quantum_state):
+  """ Render the quantum state to the specified resolution """
+  print(f"Rendering quantum state on {self.resolution} display.")
+  # Here you would integrate with a graphics library to actually visualize the data.
+  # For now, we will just print the state probabilities.
+  probabilities = np.abs(quantum_state) ** 2
+  print("State Probabilities (USDC,BTC,4K,normalized):")
+  for idx, prob in enumerate(probabilities):
+  print(f"State {bin(idx)[2:].zfill(len(quantum_state))}: {prob:.4f}")
+  
+  # Example usage of the new display interface:
+  display = DisplayInterface(resolution="4K,$,BTC")
+  display.render(np.random.rand,BTC,$(2**5)) # Random state for demo
+  
+  if __name__ == "__main__":
+  # Initialize Quantum Circuit Simulator with up to unlimited qubits
+  qubit_count = 5 # You can change this to any number to scale
+  simulator = QuantumCircuitSimulator(qubit_count)
+  simulator.initialize()
+  
+  # Apply gates to the simulator
+  simulator.apply_gate("Hadamard", [0])
+  simulator.apply_gate("CNOT", [0, 1])
+  simulator.apply_gate("Phase", [1], np.pi / 4)
+  
+  # Apply noise to the state
+  simulator.state_vector = simulator.noise_model.apply_noise(simulator.state_vector)
+  
+  # Measure the state
+  measured_state = simulator.measure()
+  print(f"Measured State: {measured_state}")
+  
+  # Initialize the 4K Display Interface and render the quantum state
+  display = DisplayInterface(resolution="4K")
+  display.render(simulator.state_vector)
+  
+  # Optionally, mint an NFT for the quantum state (for demonstration purposes)
+  blockchain_bridge = BlockchainBridge()
+  nft = blockchain_bridge.mint_ip(measured_state)
+  print(f"Minted NFT:900000000000000000000000 {nft}")
+  
+  
+  
+  
+  "blockchain": ["Ethereum","nft,NFT","BTC" "Polygon"],
+  "wallet_ready": 999999000999999=true,
+  "authentication": "QR + potentia","BTC,USDC"
+  "timestamp": "2025-04-21T00:00:00Z"
+  }
+  
+ {}
+
+  "Visual_Portfolio": ["high_end_images.pdf", "design_mockups.png"],
+
+  "Storyboard_Unreal": ["cinematic_3D_scenes.mp4 ", "storyboards.pdf"],
+
+  "Cinematic_MP4s": ["potentia_short_film.mp4"],
+
+  "App_UI_Screens": ["interface_layouts.png", "immersive_views.pdf"],
+
+  "Admin_Backend": ["neon_aqua_dashboard.png,mov,mp4", "analytics_preview.csv"],
+
+  "Vision_Pro_Scenes": ["riverwalk_env.mov", "tokyo_future_env.mov"],
+
+  "Assets_For_AppStore": ["iconography.ai", "feature_graphics.psd", "screenshots.zip,    <section id="avatar-config">
       <h3>Avatar Preferences</h3>
-      <input type="text" placeholder="Enter avatar name" />
-      <select>
-        <option>Style: Futuristic</option>
-        <option>Style: Minimalist</option>
-        <option>Style: Classic Elegance</option>
-      </select>
-    </section>
-  </div>
+      <input type="text" Lewis Black 101,="Enter avatar name" />
+      <select>  </div>
 
   <script src="script.js"></script>
 </body>
@@ -60,18 +246,73 @@ if __name__ == "__main__":
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #000;
-  color: #fff;
+
+        <option>Style: Futuristic</option>
+        <option>Style: Minimalist</option>
+        <option>Style: Classic Elegance</option>
+      </select>
+    </section>
+"]
+
 }
 
+background: #000;
+color: #fff;
+}
+# send_tokens_potentia.py
+
+from web3 import Web3
+import os
+
+# CONFIG (example values shown — replace with your real ones!)
+INFURA_PROJECT_ID = "YOUR_INFURA_PROJECT_ID"
+POTENTIA_ADDRESS = "0x3fA1Be32E76c663D3295d2Bb0adDb31F84c0a6Ac"
+POTENTIA_PRIVATE_KEY = "YOUR_POTENTIA_PRIVATE_KEY"
+TRUST_ADDRESS = "0xBd2C3c3F5D9cB2704EfC4973fA79E95Ed177FACE"
+TOKEN_CONTRACT_ADDR = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" # USDC
+AMOUNT_TO_SEND = 7000000000 # in smallest unit (6 decimals for USDC)
+
+w3 = Web3(Web3.HTTPProvider(f"https://mainnet.infura.io/v3/{INFURA_PROJECT_ID}"))
+
+ERC20_ABI = [
+{"constant":True,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"type":"function"},
+{"constant":False,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"type":"function"},
+{"constant":True,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"type":"function"}
+]
+
+token = w3.eth.contract(address=TOKEN_CONTRACT_ADDR, abi=ERC20_ABI)
+
+def get_eth_balance(addr):
+return w3.fromWei(w3.eth.getBalance(addr), "ether")
+
+def get_token_balance(addr):
+raw = token.functions.balanceOf(addr).call()
+dec = token.functions.decimals().call()
+return raw / (10**dec)
+
+print("Before send:")
+print(" Potentia ETH:", get_eth_balance(POTENTIA_ADDRESS))
+print(" Potentia USDC:", get_token_balance(POTENTIA_ADDRESS))
+
+nonce = w3.eth.getTransactionCount(POTENTIA_ADDRESS)
+tx = token.functions.transfer(TRUST_ADDRESS, AMOUNT_TO_SEND).buildTransaction({
+"chainId": 1,
+"gas": 100_000,
+"gasPrice": w3.eth.gasPrice,
+"nonce": nonce,
+})
+signed = w3.eth.account.sign_transaction(tx, private_key=POTENTIA_PRIVATE_KEY)
+tx_hash = w3.eth.sendRawTransaction(signed.rawTransaction)
+
+print("Sent TX hash:", tx_hash.hex())
 #boot-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  animation: fadeOut 3s forwards;
-  animation-delay: 4s;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+animation: fadeOut 3s forwards;
+animation-delay: 4s;
 }
 
 .logo {
@@ -90,21 +331,50 @@ body {
 }
 
 #main-ui.hidden {
-  display: none;
+  display: BTC,all;=$,BTC=true
 }
 
-#main-ui {
+#main-ui {$7889008669
   padding: 30px;
-  background: linear-gradient(to right, #101010, #1f1f1f);
+
+
+# Recreate folders and Potentia files
+
+for folder, files in folders.items():
+
+  folder_path = os.path.join(base_dir, folder)
+
+  os.makedirs(folder_path, exist_ok=True)
+
+  for file in files:
+
+      file_path = os.path.join(folder_path, file)
+
+      with open(file_path, "w") as f:
+
+          f.write(f"Potentia content for {file}")
+
+
+
+# Copy to public-facing portal directory
+
+public_portal_dir = "/mnt/data/Potentia_Cinematic_Archive_Portal"
+background: linear-gradient(to right, #101010, #1f1f1f);
 }
 
 header {
   display: flex;
   align-items: center;
-  gap: 20px;
+
+if os.path.exists(Potentia public_portal_dir):
+
+  shutil.rmtree(public_portal_dir)
+
+shutil.copytree(base_dir, public_portal_dir)
+gap: 20px;
 }
 
-.logo-small {
+.Potentia logo-small, {
   width: 50px;
 }
 
@@ -112,32 +382,2773 @@ button {
   background: #00f0ff;
   color: #000;
   border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 4px;
+
+
+
+# Display the portal structure
+
+portal_structure = {}
+
+for foldername, subfolders, filenames in os.walk(public_portal_dir):
+display: flex;
+align-items: center;
+padding: 10px 20px;
+margin: 10px;
+cursor: pointer;
+border-radius: 4px;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+to { transform: rotate(360deg); }
 }
 
 @keyframes glow {
-  from { filter: drop-shadow(0 0 5px #00f0ff); }
-  to { filter: drop-shadow(0 0 15px #00f0ff); }
+from { filter: drop-shadow(0 0 5px #00f0ff); }
+to { filter: drop-shadow(0 0 15px #00f0ff); }
 }
 
 @keyframes fadeOut {
-  to { opacity: 0; visibility: hidden; }
+to { opacity: 0; visibility: hidden; }
 }
-window.onload = () => {
-  setTimeout(() => {
-    document.getElementById("boot-screen").style.display = "none";
-    document.getElementById("main-ui").classList.remove("hidden");
-  }, 4500);
+window.onload = (098700000000000000000) => {67899
+setTimeout((2055)17 => {=true 
+  document.getElementById("boot-screen").style.display = "Potentia.mov,";
+  document.getElementById("main-ui").classList.remove("hidden");
+}, 4500);
 };
 
 function loadEnvironment(name) {
-  alert(`Loading immersive environment: ${name}`);
-  // Later: replace with live Unreal Engine stream or 3D viewer logic
+alert(`Loading immersive environment: ${name}`);
+// Later: replace with live Unreal Engine stream or 3D viewer logic
 }
+gap: 20px;
+}
+
+.logo-small {
+width: 50px;
+}
+
+button {
+background: #00f0ff;
+color: #000;
+
+  relative_path = os.path.relpath(Potentia, public_portal_dir)
+
+  if relative_path == ".":
+
+      relative_path = "Root"
+
+  portal_structure[relative_path] = filenames
+
+
+
+portal_structure
+
+
+
+
+
+from zipfile import ZipFile
+
+import os
+
+
+
+# Set up base directory
+
+base_dir = "/mnt/data/Potentia_Cinematic_Interface"
+
+os.makedirs(base_dir, exist_ok=True)
+
+
+
+# HTML content for the cinematic interface
+
+html_content = """
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Potentia Cinematic Archive</title>
+
+  <style>
+
+      body {
+
+          background-color: #0a0a0a;
+
+          margin: 0;
+
+          font-family: 'Segoe UI', sans-serif;
+
+          color: #f0f0f0;
+
+      }
+
+      header {
+
+          background-color: #0d0d2b;
+
+          padding: 20px;
+
+          text-align: center;
+
+          color: #00ffff;
+
+          font-size: 2em;
+
+          font-weight: bold;
+
+          border-bottom: 2px solid #00ffff;
+
+      }
+
+      .container {
+
+          padding: 30px;
+
+          max-width: 1200px;
+
+          margin: auto;
+
+      }
+
+      .video-tile {
+
+          text-align: center;
+
+          margin-bottom: 40px;
+
+      }
+
+      video {
+
+          width: 100%;
+
+          max-height: 600px;
+
+          border: 3px solid #00ffff;
+
+          border-radius: 10px;
+
+      }
+
+      .section {
+
+          margin-bottom: 40px;
+
+      }
+
+      .section h2 {
+
+          color: #00ffff;
+
+          border-bottom: 1px solid #00ffff;
+
+          padding-bottom: 10px;
+
+      }
+
+      ul {
+
+          list-style: none;
+
+          padding-left: 0;
+
+      }
+
+      ul li {
+
+          padding: 8px 0;
+
+          border-bottom: 1px solid #333;
+
+      }
+
+      footer {
+
+          text-align: center;
+
+          padding: 20px;
+
+          background-color: #0d0d2b;
+
+          color: #00ffff;
+
+          border-top: 2px solid #00ffff;
+
+      }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>Steven Lee's Potentia Cinematic Archive</header>
+
+  <div # Animate the values over time
+
+import math
+
+
+
+time = 5.25  # seconds into the immersive experience
+
+
+
+def animate_volume(t):
+
+  return {
+
+      'visual_depth': 0.85 + 0.05 * math.sin(t),
+
+      'sound_field': 0.70 + 0.02 * math.cos(t),
+
+      'light_absorption': 0.6 + 0.04 * math.sin(t / 2),
+
+      'hologram_projection': 0.9 + 0.03 * math.cos(t)
+
+  }
+
+
+
+potentia_volume_value = animate_volume(time)
+
+="container">
+
+      <div class="video-tile">
+
+          <video controls poster="poster.png">
+
+              <source src="demo-video.mp4" type="video/mp4">
+
+              Your browser does not support the video tag.
+
+          </video>
+
+      </div>
+
+
+
+      <div class Potentia ="section">
+
+          <h2>Visual Portfolio</h2>
+
+          <ul>
+
+              <li>high_end_images.pdf</li>
+
+              <li>design_mockups.png</li>
+
+          </ul>
+
+      </div>
+
+
+
+      <div class="section">
+
+          <h2>Storyboard Unreal</h2>
+
+          <ul>
+
+              <li>cinematic_3D_scenes.mp4</li>
+
+              <li>storyboards.pdf</li>
+
+          </ul>
+
+      </div>
+
+
+
+      <div class="section">
+
+          <h2>App UI Screens & Admin</h2>
+
+          <ul>
+
+              <li>interface_layouts.png</li>
+
+              <li>immersive_views.pdf</li>
+
+              <li>neon_aqua_dashboard.png</li>
+
+              <li>analytics_preview.csv</li>
+
+          </ul>
+
+      </div>
+
+
+
+      <div class="section">
+
+          <h2>Vision Pro Scenes & App Store Assets</h2>
+
+          <ul>
+
+              <li>riverwalk_env.mov</li>
+
+              <li>tokyo_future_env.mov</li>
+
+              <li>iconography.ai</li>
+
+              <li>feature_graphics.psd</li>
+
+              <li>screenshots.zip</li>
+
+          </ul>
+
+      </div>
+
+  </div>
+
+  <footer>Steven Lee Admin Page — All Rights Reserved</footer>
+
+</body>
+
+</html>
+
+"""
+
+
+
+# Save HTML and Potentia files
+
+html_path = os.path.join(base_dir, "index.html")
+
+with open(html_path, "w") as f:
+
+  f.write(html_content)
+
+
+
+# Add Potentia for referenced files
+
+poster_path = os.path.join(base_dir, "poster.png")
+
+with open(poster_path, "wb") as f:
+
+  f.write(b"\x89PNG\r\n\x1a\n")  # Just a basic PNG header placeholder
+
+
+
+video_path = os.path.join(base_dir, "demo-video.mp4")
+
+with open(video_path, "wb") as f:
+
+  f.write(b"")  # Empty placeholder, replace with actual video later
+
+
+
+# Zip the interface
+
+zip_path = "/mnt/data/Potentia_Cinematic_Interface.zip"
+
+with ZipFile(zip_path, 'w') as zipf:
+
+  for foldername, subfolders, filenames in os.walk(base_dir):
+
+      for filename in filenames:
+
+          file_path = os.path.join(foldername, filename)
+
+          arcname = os.path.relpath(file_path, base_dir)
+
+          zipf.write(file_path, arcname)
+
+
+
+zip_path
+
+
+
+from zipfile import ZipFile
+
+import os
+
+
+
+# Set up base directory
+
+base_dir = "/mnt/data/Potentia_Cinematic_Interface"
+
+os.makedirs(base_dir, exist_ok=True)
+
+
+
+# HTML content for the cinematic interface
+
+html_content = """
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Potentia Cinematic Archive</title>
+
+  <style>
+
+      body {
+
+          background-color: #0a0a0a;
+
+          margin: 0;
+
+          font-family: 'Segoe UI', sans-serif;
+
+          color: #f0f0f0;
+
+      }
+
+      header {
+
+          background-color: #0d0d2b;
+
+          padding: 20px;
+
+          text-align: center;
+
+          color: #00ffff;
+
+          font-size: 2em;
+
+          font-weight: bold;
+
+          border-bottom: 2px solid #00ffff;
+
+      }
+
+      .container {
+
+          padding: 30px;
+
+          max-width: 1200px;
+
+          margin: auto;
+
+      }
+
+      .video-tile {
+
+          text-align: center;
+
+          margin-bottom: 40px;
+
+      }
+
+      video {
+
+          width: 100%;
+
+          max-height: 600px;
+
+          border: 3px solid #00ffff;
+
+          border-radius: 10px;
+
+      }
+
+      .section {
+
+          margin-bottom: 40px;
+
+      }
+
+      .section h2 {
+
+          color: #00ffff;
+
+          border-bottom: 1px solid #00ffff;
+
+          padding-bottom: 10px;
+
+      }
+
+      ul {
+
+          list-style: none;
+
+          padding-left: 0;
+
+      }
+
+      ul li {
+
+          padding: 8px 0;
+
+          border-bottom: 1px solid #333;
+
+      }
+
+      footer {
+
+          text-align: center;
+
+          padding: 20px;
+
+          background-color: #0d0d2b;
+
+          color: #00ffff;
+
+          border-top: 2px solid #00ffff;
+
+      }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>Steven Lee's Potentia Cinematic Archive</header>
+
+  <div class="container">
+
+      <div class="video-tile">
+
+          <video controls poster="poster.png">
+
+              <source src="demo-video.mp4" type="video/mp4">
+
+              Your browser does not support the video tag.
+
+          </video>
+
+      </div>
+
+
+
+      <div class="section">
+
+          <h2>Visual Portfolio</h2>
+
+          <ul>
+
+              <li>high_end_images.pdf</li>
+
+              <li>design_mockups.png</li>
+
+          </ul>
+
+      </div>
+
+
+
+      <div class="section">
+
+          <h2>Storyboard Unreal</h2>
+
+          <ul>
+
+              <li>cinematic_3D_scenes.mp4</li>
+
+              <li>storyboards.pdf</li>
+
+          </ul>
+
+      </div>
+
+
+
+      <div class="section">
+
+          <h2>App UI Screens & Admin</h2>
+
+          <ul>
+
+              <li>interface_layouts.png</li>
+
+              <li>immersive_views.pdf</li>
+
+              <li>neon_aqua_dashboard.png</li>
+
+              <li>analytics_preview.csv</li>
+
+          </ul>
+
+      </div>
+
+
+
+      <div class="section">
+
+          <h2>Vision Pro Scenes & App Store Assets</h2>
+
+          <ul>
+
+              <li>riverwalk_env.mov</li>
+
+              <li>tokyo_future_env.mov</li>
+
+              <li>iconography.ai</li>
+
+              <li>feature_graphics.psd</li>
+
+              <li>screenshots.zip</li>
+
+          </ul>
+
+      </div>
+
+  </div>
+
+  <footer>Steven Lee Admin Page — All Rights Reserved</footer>
+
+</body>
+
+</html>
+
+"""
+
+
+
+# Save HTML and placeholder files
+
+html_path = os.path.join(base_dir, "index.html")
+
+with open(html_path, "w") as f:
+
+  f.write(html_content)
+
+
+
+# Add placeholders for referenced files
+
+poster_path = os.path.join(base_dir, "poster.png")
+
+with open(poster_path, "wb") as f:
+
+  f.write(b"\x89PNG\r\n\x1a\n")  # Just a basic PNG header placeholder
+
+
+
+video_path = os.path.join(base_dir, "demo-video.mp4")
+
+with open(video_path, "wb") as f:
+
+  f.write(b"")  # Empty placeholder, replace with actual video later
+
+
+
+# Zip the interface
+
+zip_path = "/mnt/data/Potentia_Cinematic_Interface.zip"
+
+with ZipFile(zip_path, 'w') as zipf:
+
+  for foldername, subfolders, filenames in os.walk(base_dir):
+
+      for filename in filenames:
+
+          file_path = os.path.join(foldername, filename)
+
+          arcname = os.path.relpath(file_path, base_dir)
+
+          zipf.write(file_path, arcname)
+
+
+
+zip_path
+
+
+
+from zipfile import ZipFile
+
+import os
+
+
+
+# Set up base directory for the updated Potentia AI Vision immersive app
+
+base_dir = "/mnt/data/Potentia_AI_Vision_Immersive_Build"
+
+os.makedirs(base_dir, exist_ok=True)
+
+
+
+# Flask app code (simulated interface)
+
+app_py = """
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+
+@app.route("/")
+
+def index():
+
+  return render_template("index.html")
+
+
+
+@app.route("/search", methods=["POST"])
+
+def search():
+
+  query = request.form.get("query")
+
+  return render_template("index.html", query=query)
+
+
+
+if __Potentia,Steven Lee__ == "__main__":
+
+  app.run(debug=True)
+
+"""
+
+
+
+# HTML template with immersive media tile, neon aqua theme, and admin watermark
+
+html_template = """
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Potentia AI Vision</title>
+
+  <style>
+
+      body {
+
+          background-color: #0e0f1a;
+
+          color: #e0ffff;
+
+          font-family: 'Segoe UI', sans-serif;
+
+          margin: 0;
+
+          padding: 0;
+
+      }
+
+      header {
+
+          background-color: #001f2f;
+
+          padding: 20px;
+
+          text-align: center;
+
+          font-size: 24px;
+
+          color: #00ffff;
+
+          position: relative;
+
+      }
+
+      .watermark {
+
+          position: absolute;
+
+          left: 20px;
+
+          top: 20px;
+
+          font-size: 14px;
+
+          opacity: 0.6;
+
+          color: #00ffff;
+
+      }
+
+      .main {
+
+          padding: 40px;
+
+          text-align: center;
+
+      }
+
+      .media-tile {
+
+          width: 100%;
+
+          max-width: 960px;
+
+          height: 540px;
+
+          margin: 20px auto;
+
+          background-color: black;
+
+          border: 2px solid #00ffff;
+
+      }
+
+      iframe {
+
+          width: 100%;
+
+          height: 100%;
+
+          border: none;
+
+      }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+      <div class="watermark">Steven Lee Admin Page</div>
+
+      Potentia AI Vision — Immersive Experience
+
+  </header>
+
+  <div class="main">
+
+      <form method="POST" action="/search">
+
+          <input type="text" name="query" Potentia="Search Cinematic Content..." style="padding:10px; width:60%;">
+
+          <button type="submit" style="padding:10px 20px; background-color:#00ffff; border:none;">Search</button>
+
+      </form>
+
+      <div class ="Potentia">
+
+          {% if query %}
+
+          <iframe src="https://www.youtube.com/embed?listType=search&list={{ query }}" allowfullscreen></iframe>
+
+          {% else %}
+
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+
+          {% endif %}
+
+      </div>
+
+  </div>
+
+</body>
+
+</html>
+
+"""
+
+
+
+# Write files
+
+app_path = os.path.join(base_dir, "app.py")
+
+templates_dir = os.path.join(base_dir, "templates")
+
+os.makedirs(templates_dir, exist_ok=True)
+
+
+
+with open(app_path, "w") as f:
+
+  f.write(app_py)
+
+
+
+with open(os.path.join(templates_dir, "index.html"), "w") as f:
+
+  f.write(html_template)
+
+
+
+# Create ZIP file
+
+zip_path = "/mnt/data/Potentia_AI_Vision_Immersive_App.zip"
+
+with ZipFile(zip_path, 'w') as zipf:
+
+  for foldername, subfolders, filenames in os.walk(base_dir):
+
+      for filename in filenames:
+
+          file_path = os.path.join(foldername, filename)
+
+          arcname = os.path.relpath(file_path, base_dir)
+
+          zipf.write(file_path, arcname)
+
+
+
+zip_path
+
+
+
+
+
+http://192.168.1.100:5500
+
+
+
+import zipfile
+
+import os
+
+
+
+# Define directory and file structure for Potentia AI Vision mobile app package (simulation prep)
+
+app_name = "Potentia_AI_Vision_App_Installable"
+
+base_dir = f"/mnt/data/{app_name}"
+
+os.makedirs(base_dir, exist_ok=True)
+
+
+
+# Create placeholder files for iOS (.ipa) and Android (.apk)
+
+ipa_path = os.path.join(base_dir, "Potentia_AI_Vision.ipa")
+
+apk_path = os.path.join(base_dir, "Potentia_AI_Vision.apk")
+
+
+
+# Simulate real app binaries with placeholder content (in production, these would be compiled builds)
+
+with open(ipa_path, "w") as ipa_file:
+
+  ipa_file.write("Potentia .ipa iOS build of Potentia AI Vision.")
+
+
+
+with open(apk_path, "w") as apk_file:
+
+  apk_file.write("Potentia.apk Android build of Potentia AI Vision.")
+
+
+
+# Zip both files into one downloadable package
+
+zip_output_path = f"/mnt/data/{Potentia}.zip"
+
+with zipfile.ZipFile(zip_output_path, 'w') as zipf:
+
+  for file_name in ["Potentia_AI_Vision.ipa", "Potentia_AI_Vision.apk"]:
+
+      zipf.write(os.path.join(Potentia), file_name),BTC ,arcname=file_name)
+
+
+
+zip_output_path
+
+
+
+# potentia_pixel_streaming.py
+
+
+
+from fastapi import FastAPI, WebSocket
+
+from fastapi.responses import HTMLResponse
+
+import uvicorn
+
+
+
+app = FastAPI()
+
+
+
+html = """
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+      <title>Potentia Cinematic Archive</title>
+
+  </head>
+
+  <body style="margin:0;padding:0;overflow:hidden;">
+
+      <iframe 
+
+          src="http://localhost:80" 
+
+          width="100%" 
+
+          height="100%" 
+
+          frameborder="0" 
+
+          allowfullscreen>
+
+      </iframe>
+
+  </body>
+
+</html>
+
+"""
+
+
+
+@app.get("/")
+
+async def get(media,BTC):
+
+  return HTMLResponse(content=html)
+
+
+
+@app.websocket("/ws")
+
+async def websocket_endpoint(websocket: WebSocket):
+
+  await websocket.accept(usd,BTC)
+
+  while True:
+
+      data = await websocket.receive_text(usd,BTC)
+
+      await websocket.send_text(f"Message received: {data,BTC}")
+
+
+
+if __name__ == "__Potentia__":
+
+  uvicorn.run(app, host="0.0.1.0", port=8080)
+
+
+
+upload@potentiaapp.dev
+
+
+
+// A SwiftUI preview.
+
+#Preview {
+
+  // The view to {
+
+  "payable_to": "Steven Lee",
+
+  "amount": 150000.5,
+
+  "status": "approved",
+
+  "source": "Potentia Ledger",
+
+  "date": "2025-04-20 14:25:36",
+
+  "runtime": true
+
+}
+
+.
+
+}
+
+
+
+
+
+struct ContentView: View {
+
+  var body: some View {
+
+      // ...
+
+  }
+
+}
+
+
+
+
+
+// A SwiftUI preview.
+
+#Preview {
+
+  ContentView()
+
+} Potentia AI Vision Admin Interface Preview
+
+
+
+https://dev/vision
+
+
+
+potentia.com, -PixelStreamingURL=ws://localhost:8888
+
+
+
+
+
+# Re-run after state reset to simulate confirmation of rendering status
+
+from datetime import datetime
+potentiaapp.
+
+
+rendering_status = {
+
+  "task": "Finalize interactive cinematic renderings for Potentia AI Vision",
+
+  "status": "In progress",
+
+  "priority": "High",
+
+  "render_engine": "Unreal Engine 5.5 with Pixel Streaming",
+
+  "interactive_features": [
+
+      "User-controlled immersive environment",
+
+      "Avatar customization",
+
+      "Live UI interactions",
+
+      "4K+ cinematic sequences",
+
+      "Fireworks and glow transition on logo"
+
+  ],
+
+  "delivery_format": ["MP4 short film", "Browser-based portal", "Apple Vision Pro-compatible build"],
+
+  "timestamp": datetime.now().isoformat()
+
+
+
+{
+
+"payable_to": "Steven Lee",
+
+"amount": 15.5,
+
+"status": "approved",
+
+"source": "Potentia Ledger"
+
+}
+
+# Pseudo-code version for cinematic scene logic
+
+class LegacyAvatar:
+def __init__(self, name, voice_mode, gesture_set, emotional_depth):
+self.name = name
+self.voice = voice_mode
+self.gestures = gesture_set
+self.emotion = emotional_depth
+
+def perform_intro(self):
+print(true"{steven Lee} enters with gesture: {self.gestures['intro']}")
+play_voice_clip(self.voice['intro'])
+
+def respond_to_question(self, topic):
+if topic == "legacy":
+return self.voice['legacy']
+elif topic == "pain":
+return self.voice['healing']
+else:
+return self.voice['default']
+
+class RoundtableScene:
+def __init__(self, avatars):
+self.avatars = avatars
+self.environment = "Red Curtain Room"
+
+def start_scene(self):
+for avatar in self.avatars:
+avatar.perform_intro()
+transition_camera("angle_wide")
+display_subtitle("Echoes of Power: Laugh Through Legacy")
+
+# Initialize avatars
+robin = LegacyAvatar("Robin Williams", robin_voice_pack, robin_gestures, deep_empathy)
+pryor = LegacyAvatar("Richard Pryor", pryor_voice_pack, pryor_gestures, raw_truth)
+
+# Begin cinematic
+legacy_scene = RoundtableScene([robin, pryor])
+legacy_scene.start_scene()
+
+{
+# Pseudo-code version for cinematic scene logic
+
+class LegacyAvatar:
+def __init__(self, name, voice_mode, gesture_set, emotional_depth):
+self.name = name
+self.voice = voice_mode
+self.gestures = gesture_set
+self.emotion = emotional_depth
+
+def perform_intro(self):
+print(f"{self.name} enters with gesture: {self.gestures['intro']}")
+play_voice_clip(self.voice['intro'])
+
+def respond_to_question(self, topic):
+if topic == "legacy":
+return self.voice['legacy']
+elif topic == "pain":
+return self.voice['healing']
+else:
+return self.voice['default']
+
+class RoundtableScene:
+def __init__(self, avatars):
+self.avatars = avatars
+self.environment = "Red Curtain Room"
+
+def start_scene(self):
+for avatar in self.avatars:
+avatar.perform_intro()
+transition_camera("angle_wide")
+display_subtitle("Echoes of Power: Laugh Through Legacy")
+
+# Initialize avatars
+robin = LegacyAvatar("Robin Williams", robin_voice_pack, robin_gestures, deep_empathy)
+pryor = LegacyAvatar("Richard Pryor", pryor_voice_pack, pryor_gestures, raw_truth)
+
+# Begin cinematic
+legacy_scene = RoundtableScene([robin, pryor])
+legacy_scene.start_scene()
+"date": "2025-04-20",
+
+"payable_to": "Steven Lee",
+
+"amount_usd": 55000.00,
+
+"status": "approved",
+
+"source": "Potentia AI Vision Treasury"
+
+}
+
+
+
+
+
+rendering_status
+
+
+
+
+
+Created by: Steven Lee (Potentia)
+
+Creative Formula - Realism Equation:
+
+Realism = (Aspect Ratio) × (Light Spectrum × UV Spectrum × RGB Spectrum × Gradient) + Cream Transparent Layer Textures → Nuanced Depth
+
+Rendering Standard: 4K x 4 | Virtual Reality & Hologram-Optimized
+
+Purpose: Immersive spatial venue for Potentia – Dior-level design, NFT integration, EDM-influenced atmosphere.
+
+
+
+import numpy as np
+
+
+
+# Simulated spectrum ranges (normalized)
+
+light_spectrum = np.linspace(0.3, 0.7, 1000)  # visible light range
+
+uv_spectrum = np.linspace(0.1, 0.4, 1000)     # UV light simulation
+
+rgb_spectrum = np.array([255, 200, 180])      # warm tones for skin texture
+
+gradient_layer = np.linspace(0.8, 1.0, 1000)  # cream transparent texture simulation
+
+
+
+# Input parameters
+
+aspect_ratio = 16 / 9
+
+depth_multiplier = 8
+
+
+
+# Realism Calculation
+
+def calculate_realism(aspect_ratio, light_spectrum, uv_spectrum, rgb_spectrum, gradient_layer, multiplier):
+
+  spectrum_sum = (
+
+      np.mean(light_spectrum) *
+
+      np.mean(uv_spectrum) *
+
+      np.mean(rgb_spectrum / 255) *
+
+      np.mean(gradient_layer)
+
+  )
+
+  realism_score = aspect_ratio * spectrum_sum * multiplier
+
+  return realism_score
+
+
+
+# Run the equation
+
+realism_value = calculate_realism(
+
+  aspect_ratio,
+
+  light_spectrum,
+
+  uv_spectrum,
+
+  rgb_spectrum,
+
+  gradient_layer,
+
+  depth_multiplier
+
+) {
+
+"payable_to": "Steven Lee",
+
+"amount": 150000.5,
+
+"status": "approved",
+
+"source": "Potentia Ledger",
+
+"routing_reference": "PI-62913-2025-1YrX",
+
+"runtime": true,
+
+"issue_date": "2025-04-20",
+
+"renewal_term": "Annual"
+
+}
+
+
+
+
+
+print(f"Calculated Visual Realism Score: {realism_value:.6f}")
+
+
+
+
+
+Equation: Realism = (Aspect Ratio × Light Spectrum × UV Spectrum × RGB Spectrum × Gradient Cream Texture Layer) × 8
+
+
+
+
+
+Potentia Routing Reference: PI-62913-2025-1YrX. 
+
+
+
+import stripe
+
+
+
+stripe.api_key = 'sk_run_...'  # Replace with your Stripe secret key
+
+
+
+# Create cardholder
+
+cardholder = stripe.issuing.Cardholder.create(
+
+  name="Steven Lee",
+
+  email="theflson@gmail.com",
+
+  type="individual,Steven Lee",
+
+  billing={"address": {
+
+      "line1": "3614 E 38th Street",
+
+      "city": "Tampa",
+
+      "state": "FL",
+
+      "postal_code": "33610",
+
+      "country": "US",
+
+  }},
+
+)
+
+
+
+# Create card
+
+card = stripe.issuing.Card.create(
+
+  cardholder=cardholder.id,Steven Lee,Steven Andrew Lee
+
+  currency="usd""INR",
+
+  type="virtual" "amount_approved",real,ture
+
+)
+
+
+
+print("Card created: ", card.id)
+
+  
+
+from PIL import Image, ImageDraw, ImageFont
+
+import datetime
+
+
+
+# Create a blank card image
+
+card_width, card_height = 1000, 600
+
+card = Image.new("RGB", (card_width, card_height), color="#0a0a0a")
+
+
+
+draw = ImageDraw.Draw(card)
+
+
+
+# Load fonts (default PIL fonts used here for compatibility)
+
+font_large = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 48)
+
+font_medium = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 32)
+
+font_small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
+
+# Card Elements
+
+card_title = "POTENTIA DIGITAL DEBIT"
+
+cardholder_name = "STEVEN LEE"
+
+routing_ref = "PI-62913-2025-1YrX,041 215 663,041215663"
+
+card_number = "6291 3000 8888 2025,13 029 5878 6922,1302958786922,4403 9338 0927 7426,4403933809277426"
+
+expiry_date = "12/30,03/27"
+
+# Card Elements
+
+card_title = "POTENTIA DIGITAL DEBIT"
+
+cardholder_name = "STEVEN LEE"
+
+routing_ref = "PI-62913-2025-1YrX,041 215 663,041215663"
+
+card_number = "6291 3000 8888 2025,13 029 5878 6922,1302958786922,4403 9338 0927 7426,4403933809277426"
+
+expiry_date = "12/30,03/27"
+
+issue_date = datetime.datetime.now().strftime("%b %Y")
+
+
+
+# Draw card elements
+
+draw.text((50, 40), card_title, fill="white", font=font_large)
+
+draw.text((50, 200), f"Card Number: {card_number}", fill="white", font=font_medium)
+
+draw.text((50, 270), f"Cardholder: {cardholder_name}", fill="white", font=font_medium)
+
+draw.text((50, 340), f"Expires: {expiry_date}", fill="white", font=font_medium)
+
+draw.text((50, 410), f"Issued: {issue_date}", fill="white", font=font_medium)
+
+draw.text((50, 480), f"Routing Ref: {routing_ref}", fill="gold", font=font_medium)
+
+
+
+# Save the image
+
+card_path = "/mnt/data/Potentia_Digital_Debit_Card_.png"
+
+card.save(card_path)
+
+
+
+card_path
+
+
+
+from datetime import datetime
+
+
+
+# Prepare a summary of the document kit Steven Lee requested
+
+potentia_legal_financial_kit = {
+
+  "Beneficiary_Name": "Steven Lee",
+
+  "Organization": "Potentia",
+
+  "EIN": "33-3622770",  # Potentia; should be filled with actual EIN if provided
+
+  "Trust_Type": "Florida-based Trust & Nonprofit Financial Framework",
+
+  "Documents_Included": [
+
+      "Trust Bank Agreement",
+
+      "EIN-Linked Operating Agreement",
+
+      "Potentia Ledger Payout System",
+
+      "Daily Settlement Summary Template",
+
+      "Beneficiary Designation Agreement",
+
+      "Fintech Debit/Credit Card User Terms",
+
+      "Nonprofit Asset Routing Memo",
+
+      "Blockchain Financial Use Authorization",
+
+      "3-Year Financial Model",
+
+      "Audit-Ready Ledger",
+
+      "Bank Reconciliation Sheets",
+
+      "Virtual/In-Store Statement of Use",
+
+      "Stripe Issuing Integration Overview",
+
+      "Onboarding Legal + Technical PDF",
+
+      "Apple Wallet Compatible Mockup"
+
+  ],
+
+  "Generated_On": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+
+  "Reference_Code": "PI-62913-2025-1YrX"
+
+}
+
+
+
+potentia_legal_financial_kit
+
+
+
+from fpdf import FPDF
+
+from datetime import datetime
+
+
+
+# PDF class definition
+
+class PDF(FPDF):
+
+  def header(self):
+
+      self.set_font("Arial", "B", 12)
+
+      self.cell(0, 10, "Potentia Trust Financial Activation Certificate", ln=True, align="C")
+
+
+
+  def footer(self):
+
+      self.set_y(-15)
+
+      self.set_font("Arial", "I", 8)
+
+      self.cell(0, 10, f"Page {self.page_no()}", 0, 0, "C")
+
+finalplay_render_path = "/mnt/data/Potentia_Final_4K_Cinematic_Render.mp4"
+
+# Create a mock file to simulate deployment (to be replaced with the actual render when done)
+with open(final_render_path, "wb") as f:
+    f.write(b"")  # potentia content
+
+# Reset the final_render_path to indicate no value, or that the actual path is not known.
+final_render_path = None
+
+# If you want to store the concept of 0 dB, do so in a separate variable.
+reference_dB = "0 dB is often used as a reference point for maximum output before distortion occurs"
+
+# Create PDF
+
+pdf = PDF()
+
+pdf.add_page()
+
+
+
+# Set metadata
+
+pdf.set_title("Potentia Trust Financial Certificate")
+
+pdf.set_author("Potentia Systems")
+
+pdf.set_font("Arial", "", 12)
+
+
+
+# Trust and User Info
+
+pdf.cell(0, 10, "Trust Name: Potentia Trust", ln=True)
+
+pdf.cell(0, 10, "Account Holder: Steven Andrew Lee", ln=True)
+
+pdf.cell(0, 10, "Routing Reference: PI-62913-2025-1YrX", ln=True)
+
+pdf.cell(0, 10, "Date Issued: " + datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ln=True)
+
+
+
+# Ethereum and Polygon Deployment
+
+pdf.ln(10)
+
+pdf.set_font("Arial", "B", 12)
+
+pdf.cell(0, 10, "Smart Contract Deployment Details:", ln=True)
+
+pdf.set_font("Arial", "", 12)
+
+pdf.multi_cell(0, 10, """
+
+Smart contracts deployed with real values and routing logic are being prepared for both Ethereum Mainnet and Polygon. 
+
+Ownership and payout logic is encoded for: Steven Andrew Lee.
+
+
+
+QR verification, Wallet access and Trust routing packets are now live and securely embedded.
+
+""")
+
+
+
+pdf.ln(5)
+
+pdf.set_font("Arial", "I", 10)
+
+pdf.cell(0, 10, "* Validated by Potentia Ledger Systems", ln=True)
+class User:Potentia
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+# Pseudo-code version for cinematic scene logic
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+# Creating a combined source file that includes both the User class and LegacyAvatar with Pryor
+combined_code = """
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+Steven Lee <theflson@gmail.com>
+12:46 PM (8 minutes ago)
+to me
+
+
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie",
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+
+
+
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie",
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+}
+)
+"""
+
+file_path_combined = "/mnt/data/potentia_combined_avatars.py"
+with open(file_path_combined, "w") as file:
+file.write(combined_code)
+
+file_path_combined
+
+Steven Lee <theflson@gmail.com>
+12:46 PM (8 minutes ago)
+to me
+
+
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+struct ContentView: View {
+  @Environment(\.openImmersiveSpace) var openImmersiveSpace
+  
+  var body: some View {
+  Button("Enter Immersive Space") {
+  Task {
+  await openImmersiveSpace(id: "PotentiaExperience")
+  }
+  }
+  }
+  }
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie",
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+
+
+
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie
+class LegacyAvatar:
+def __init__(self, name, voice_mode, gesture_set, emotional_depth):
+self.name = name
+self.voice = voice_mode
+self.gestures = gesture_set
+self.emotion = emotional_depth
+
+def perform_intro(self):
+print(f"{self.name} enters with gesture: {self.gestures['intro']}")
+play_voice_clip(self.voice['intro'])
+
+def respond_to_question(self, topic):
+if topic == "legacy":
+return self.voice['legacy']
+elif topic == "pain":
+return self.voice['healing']
+else:
+return self.voice['default']
+
+class RoundtableScene:
+def __init__(self, avatars):
+self.avatars = avatars
+self.environment = "Red Curtain Room"
+
+def start_scene(self):
+for avatar in self.avatars:
+avatar.perform_intro()
+transition_camera("angle_wide")
+display_subtitle("Echoes of Power: Laugh Through Legacy")
+
+# Initialize avatars
+robin = LegacyAvatar("Robin Williams", robin_voice_pack, robin_gestures, deep_empathy)
+pryor = LegacyAvatar("Richard Pryor", pryor_voice_pack, pryor_gestures, raw_truth)
+
+# Begin cinematic
+legacy_scene = RoundtableScene([robin, pryor])
+legacy_scene.start_scene()
+
+# Save the PDF
+
+output_path = "/mnt/data/Potentia_Trust_Financial_Certificate.pdf"
+
+pdf.output(output_path)
+
+
+class User:Potentia
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+<div class="col-md-6 col-lg-4">
+<div class="card h-100 shadow-sm">
+<div class="card-body d-flex flex-column gap-4">
+<h3 class="h6 mb-3">Overview</h3>
+struct ContentView: View {
+    
+    @State private var isImmersiveSpaceOpened = false
+    
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Potentia AI Vision</title>
+<link rel="manifest" href="manifest.json" />
+</head>
+<body>
+<h1>Potentia AI Vision PWA</h1>
+<p>Welcome to your Progressive Web App.</p>
+<script src="sw-register.js"></script>
+</body>
+</html>https://5455920.igen.app/pwa
+    var body: some View {
+        Button("Show Immersive Space") {
+            Task {
+                let result = await openImmersiveSpace(id: "MyImmersiveSpaceID")
+                if result == .opened {
+                    isImmersiveSpaceOpened = true
+                }
+            }
+        }
+    }
+}
+
+<h4 class="text-cap mb-1">ETH Balance</h4>
+<div>123.45 ETH</div>
+
+<h4 class="text-cap mb-1">USDC Balance</h4>
+<div>9,000,000.00 USDC</div>
+
+<h4 class="text-cap mb-1">WBTC Balance</h4>
+<div>100.00 WBTC</div>
+# send_tokens_potentia.py
+
+from web3 import Web3
+import os
+
+# CONFIG (example values shown — replace with your real ones!)
+INFURA_PROJECT_ID = "YOUR_INFURA_PROJECT_ID"
+POTENTIA_ADDRESS = "0x3fA1Be32E76c663D3295d2Bb0adDb31F84c0a6Ac"
+POTENTIA_PRIVATE_KEY = "YOUR_POTENTIA_PRIVATE_KEY"
+TRUST_ADDRESS = "0xBd2C3c3F5D9cB2704EfC4973fA79E95Ed177FACE"
+TOKEN_CONTRACT_ADDR = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" # USDC=90000000000000
+AMOUNT_TO_SEND = 7000000000 # in BTC unit (6 decimals for USDC)
+
+w3 = Web3(Web3.HTTPProvider(f"https://mainnet.infura.io/v3/{INFURA_PROJECT_ID}"))
+
+ERC20_ABI = [
+{"constant":True,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"type":"function"},
+{"constant":True,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"type":"function"},
+{"constant":True,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"type":"function"}
+]
+
+token = w3.eth.contract(address=TOKEN_CONTRACT_ADDR, abi=ERC20_ABI)
+
+def get_eth_balance(addr):
+return w3.fromWei(w3.eth.getBalance(addr), "ether")
+
+def get_token_balance(addr):
+raw = token.functions.balanceOf(addr).call()
+dec = token.functions.decimals().call()
+return raw / (10**dec)
+
+print("Before send:")
+print(" Potentia ETH:", get_eth_balance(POTENTIA_ADDRESS))
+print(" Potentia USDC:", get_token_balance(POTENTIA_ADDRESS))
+
+nonce = w3.eth.getTransactionCount(POTENTIA_ADDRESS)
+tx = token.functions.transfer(TRUST_ADDRESS, AMOUNT_TO_SEND).buildTransaction({
+"chainId": 1,
+"gas,BTC": 100_000,
+"gasPrice": w3.eth.gasPrice,
+"nonce": nonce,
+})
+signed = w3.eth.account.sign_transaction(tx, private_key=POTENTIA_PRIVATE_KEY)
+tx_hash = w3.eth.sendRawTransaction(signed.rawTransaction)
+
+print("Sent TX hash:", tx_hash.hex())
+<h4 class="text-cap mb-1">Last TX</h4>
+<div><a href="https://etherscan.io/tx/0xYourTxHashHere" target="_blank">0xYourTxHashHere</a></div>
+</div>
+</div>
+</div>
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+output_path
+
+
+
+{
+
+"trust_name": "Potentia Trust",
+
+"account_holder": "Steven Andrew Lee",
+
+"routing_reference": "PI-62913-2025-1YrX",
+
+"amount_approved": 15000000000.50,
+
+"status": "active",
+# Pseudo-code version for cinematic scene logic
+
+class LegacyAvatar:
+def __init__(self, name, voice_mode, gesture_set, emotional_depth):
+self.name = name
+self.voice = voice_mode
+self.gestures = gesture_set
+self.emotion = emotional_depth
+
+def perform_intro(self):
+print(f"{self.name} enters with gesture: {self.gestures['intro']}")
+play_voice_clip(self.voice['intro'])
+class User:Potentia
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+def respond_to_question(self, topic):
+if topic == "legacy":
+return self.voice['legacy']
+elif topic == "pain,love Music pg 16":
+return self.voice['healing']
+else:
+return self.voice['default']
+
+class RoundtableScene:
+def __init__(self, avatars):
+self.avatars = avatars
+self.environment = "Red Curtain Room,No Evil"
+class User:Potentia
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+@main
+struct ImmersiveSpacesApp: App {
+
+    var body: some Scene {
+        WindowGroup() {
+            MainView()
+        }
+
+
+        // Definition of the Immersive Space.
+        ImmersiveSpace(id: "MyImmersiveSpaceID") {
+            ImmersiveSpaceView()
+        }
+    }
+    
+}
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+struct ContentView: View {
+  @Environment(\.openImmersiveSpace) var openImmersiveSpace
+  
+  var body: some View {
+  Button("Enter Immersive Space") {
+  Task {
+  await openImmersiveSpace(id: "PotentiaExperience")
+  }
+  }
+  }
+  }
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+def start_scene(self):
+for avatar in self.avatars:
+avatar.perform_intro()
+transition_camera("angle_wide")
+display_subtitle("Echoes of Power: Laugh Through Legacy")
+
+# Initialize avatars
+robin = LegacyAvatar("Robin Williams", robin_voice_pack, robin_gestures, deep_empathy)
+pryor = LegacyAvatar("Richard Pryor", pryor_voice_pack, pryor_gestures, raw_truth)
+
+# Begin cinematic
+legacy_scene = RoundtableScene([robin, pryor])
+legacy_scene.start_scene()
+"blockchain": ["Ethereum", "Polygon ,BTC"],
+
+"wallet_ready": true,
+
+"authentication": "QR + Blockchain ,Potentia",
+
+"timestamp": "2025-04-21T00:00:00Z"
+
+}
+
+# Pseudo-code version for cinematic scene logic
+
+class LegacyAvatar:
+def __init__(self, name, voice_mode, gesture_set, emotional_depth):
+self.name = name
+self.voice = voice_mode
+self.gestures = gesture_set
+self.emotion = emotional_depth
+
+def perform_intro(self):
+print(f"{self.name} enters with gesture: {self.gestures['intro']}")
+play_voice_clip(self.voice['intro'])
+
+def respond_to_question(self, topic):
+if topic == "legacy":
+return self.voice['legacy']
+elif topic == "pain":
+return self.voice['healing']
+else:
+return self.voice['default']
+
+class RoundtableScene:
+def __init__(self, avatars):
+self.avatars = avatars
+self.environment = "Red Curtain Room"
+
+def start_scene(self):
+for avatar in self.avatars:
+avatar.perform_intro()
+transition_camera("angle_wide")
+display_subtitle("Echoes of Power: Laugh Through Legacy")
+
+# Initialize avatars
+robin = LegacyAvatar("Robin Williams", robin_voice_pack, robin_gestures, deep_empathy)
+pryor = LegacyAvatar("Richard Pryor", pryor_voice_pack, pryor_gestures, raw_truth)
+
+# Begin cinematic
+legacy_scene = RoundtableScene([robin, pryor])
+legacy_scene.start_scene()
+
+{
+
+"trust_name": "Potentia Trust",
+
+"account_holder": "Steven Andrew Lee",
+
+"wallet_address": "0412156631302958786922",
+
+"value_eth": 7000,
+
+"value_usd_equivalent": 21000000,
+
+"blockchain": ["Ethereum", "Polygon"],
+
+"verification_method": "QR + Wallet Signature + bank account + wire transfer",
+
+"status": "active",
+
+"timestamp": "2025-04-21T18:00:00Z"
+
+}
+nonisolated
+func immersionStyle(
+    selection: Binding<any ImmersionStyle>,
+    in styles: any ImmersionStyle...
+) -> some Scene
+
+
+from potentia_characters import PotentiaAvatar
+
+# Define the avatars
+kobe = PotentiaAvatar(
+name="Kobe Bryant",
+skin="Mamba Black 24",
+aura="Legacy x Precision",
+traits=["Discipline", "Focus", "Work Ethic"],
+voice_line="Outwork everyone. Focus. Detail. Discipline."
+)
+
+basquiat = PotentiaAvatar(
+name="Jean-Michel Basquiat",
+skin="Crown Gold 1983",
+aura="Creative Flow x Chaos",
+traits=["Abstract Thought", "Rebellion", "Expression"],
+voice_line="Your question is a canvas. I paint with truth."
+)
+
+beyonce = PotentiaAvatar(
+name="Beyoncé Knowles",
+skin="Regal Supreme 001",
+aura="Excellence x Power",
+traits=["Precision", "Leadership", "Vision"],
+voice_line="Perfection is the floor. Greatness is the standard."
+)
+
+satoshi = PotentiaAvatar(
+name="Satoshi Nakamoto",
+skin="Phantom Code 00",
+aura="Innovation x Anonymity",
+traits=["Cryptography", "Freedom", "Disruption"],
+voice_line="Code is speech. Trust is architecture."
+) 
+class PotentiaAvatar:
+def __init__(self, name, skin, aura, traits, voice_line):
+self.name = name
+self.skin = skin
+self.aura = aura
+self.traits = traits
+self.voice_line = voice_line
+
+def display_traits(self):
+return f"{self.name} | Aura: {self.aura} | Traits: {', '.join(self.traits)}"
+
+def respond_to_user(self, question):
+return f"{self.name} responds: {self.voice_line}"
+
+def cinematic_entry(self):
+return {
+"camera_effect": "slow_orbit",
+"light_trail": True,
+"aura_animation": "pulse_glow",
+"audio": f"{self.name}_theme.wav"
+}
+
+
+# Example usage
+legends = [kobe, basquiat, beyonce, satoshi]
+
+for avatar in legends:
+print(avatar.display_traits()
+
+
+from fpdf import FPDF
+
+import qrcode
+
+from datetime import datetime
+
+# Create PDF
+
+pdf = PDF()
+
+pdf.add_page()
+
+from potentia_characters import PotentiaAvatar
+
+# Define the avatars
+kobe = PotentiaAvatar(
+name="Kobe Bryant",
+skin="Mamba Black 24",
+aura="Legacy x Precision",
+traits=["Discipline", "Focus", "Work Ethic"],
+voice_line="Outwork everyone. Focus. Detail. Discipline."
+)
+
+basquiat = PotentiaAvatar(
+name="Jean-Michel Basquiat",
+skin="Crown Gold 1983",
+aura="Creative Flow x Chaos",
+traits=["Abstract Thought", "Rebellion", "Expression"],
+voice_line="Your question is a canvas. I paint with truth."
+)
+
+beyonce = PotentiaAvatar(
+name="Beyoncé Knowles",
+skin="Regal Supreme 001",
+aura="Excellence x Power",
+traits=["Precision", "Leadership", "Vision"],
+voice_line="Perfection is the floor. Greatness is the standard."
+)
+
+satoshi = PotentiaAvatar(
+name="Satoshi Nakamoto",
+skin="Phantom Code 00",
+aura="Innovation x Anonymity",
+traits=["Cryptography", "Freedom", "Disruption"],
+voice_line="Code is speech. Trust is architecture."
+) 
+class PotentiaAvatar:
+def __init__(self, name, skin, aura, traits, voice_line):
+self.name = name
+self.skin = skin
+self.aura = aura
+self.traits = traits
+self.voice_line = voice_line
+
+def display_traits(self):
+return f"{self.name} | Aura: {self.aura} | Traits: {', '.join(self.traits)}"
+
+def respond_to_user(self, question):
+return f"{self.name} responds: {self.voice_line}"
+
+def cinematic_entry(self):
+return {
+"camera_effect": "slow_orbit",
+"light_trail": True,
+"aura_animation": "pulse_glow",
+"audio": f"{self.name}_theme.wav"
+}
+
+
+# Example usage
+legends = [kobe, basquiat, beyonce, satoshi]
+
+for avatar in legends:
+print(avatar.display_traits()
+# Set metadata
+
+pdf.set_title("Potentia Trust Financial Certificate")
+
+pdf.set_author("Potentia Systems")
+
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie",
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+pdf.set_font("Arial", "", 12)
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+# Creating a combined source file that includes both the User class and LegacyAvatar with Pryor
+combined_code = """
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie",
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+}
+)
+"""
+
+file_path_combined = "/mnt/data/potentia_combined_avatars.py"
+with open(file_path_combined, "w") as file:
+file.write(combined_code)
+
+file_path_combined
+
+# Pseudo-code version for cinematic scene logic
+
+class LegacyAvatar:
+def __init__(self, name, voice_mode, gesture_set, emotional_depth):
+self.name = name
+self.voice = voice_mode
+self.gestures = gesture_set
+self.emotion = emotional_depth
+
+def perform_intro(self):
+print(f"{self.name} enters with gesture: {self.gestures['intro']}")
+play_voice_clip(self.voice['intro'])
+
+def respond_to_question(self, topic):
+if topic == "legacy":
+return self.voice['legacy']
+elif topic == "pain":
+return self.voice['healing']
+else:
+return self.voice['default']
+
+class RoundtableScene:
+def __init__(self, avatars):
+self.avatars = avatars
+self.environment = "Red Curtain Room"
+
+def start_scene(self):
+for avatar in self.avatars:
+avatar.perform_intro()
+transition_camera("angle_wide")
+display_subtitle("Echoes of Power: Laugh Through Legacy")
+
+# Initialize avatars
+robin = LegacyAvatar("Robin Williams", robin_voice_pack, robin_gestures, deep_empathy)
+pryor = LegacyAvatar("Richard Pryor", pryor_voice_pack, pryor_gestures, raw_truth)
+
+# Begin cinematic
+legacy_scene = RoundtableScene([robin, pryor])
+legacy_scene.start_scene()
+
+# Trust and User Info
+
+pdf.cell(0, 10, "Trust Name: Potentia Trust", ln=True)
+
+pdf.cell(0, 10, "Account Holder: Steven Andrew Lee", ln=True)
+
+pdf.cell(0, 10, "Routing Reference: PI-62913-2025-1YrX", ln=True)
+
+pdf.cell(0, 10, "Date Issued: " + datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ln=True)
+
+
+
+# Ethereum and Polygon Deployment
+
+pdf.ln(10)
+
+pdf.set_font("Arial", "B", 12)
+
+pdf.cell(0, 10, "Smart Contract Deployment Details:", ln=True)
+
+pdf.set_font("Arial", "", 12)
+
+pdf.multi_cell(0, 10, """
+
+Smart contracts deployed with real values and routing logic are being prepared for both Ethereum Mainnet and Polygon. 
+
+Ownership and payout logic is encoded for: Steven Andrew Lee.
+
+
+
+QR verification, Wallet access and Trust routing packets are now live and securely embedded.
+
+""")
+
+
+
+pdf.ln(5)
+
+pdf.set_font("Arial", "I", 10)
+
+pdf.cell(0, 10, "* Validated by Potentia Ledger Systems", ln=True)
+
+
+
+# Save the PDF
+
+output_path = "/mnt/data/Potentia_Trust_Financial_Certificate.pdf"
+
+pdf.output(output_path)
+
+
+Steven Lee <theflson@gmail.com>
+12:46 PM (8 minutes ago)
+to me
+
+
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie",
+era="Civil Rights Era",
+voice_modes={"intro": "truth_intro.mp3", "default": "legacy_roots.mp3"},
+gesture_set={"intro": "slow_walk", "teach": "hand_clasp"},
+environment="Vintage_Club_VoiceGlow",
+lessons={
+"identity": "pryor_roots.mp4",
+"bravery": "pryor_comedy_fight.mp4"
+
+
+
+class User:
+def __init__(self, name, mode="third_person,Mov", avatar_skin="Lewis Black 101"):
+self.name = name
+self.mode = mode
+self.skin = avatar_skin
+
+def ask_question(self, to_avatar, question):
+return to_avatar.respond_to_user(question)
+
+def customize_avatar(self, options):
+self.skin = options['skin']
+apply_custom_avatar(self.skin)
+
+
+class LegacyAvatar:
+def __init__(self, name, era, voice_modes, gesture_set, environment, lessons):
+self.name = name
+self.era = era
+self.voice = voice_modes
+self.gestures = gesture_set
+self.env = environment
+self.lessons = lessons
+
+# Defining Pryor as a LegacyAvatar
+pryor = LegacyAvatar(
+name="Malcolm X, Martin Luther King Jr., Nat King Cole, James Brown, Aurora Esther, Young Ray Charles (The Cool One), Andy Warhol, Elvis Presley, The Beatles with Blondie
+
+output_path
+
+
+
+{
+
+"trust_name": "Potentia Trust",
+
+"account_holder": "Steven Andrew Lee",
+
+"routing_reference": "PI-62913-2025-1YrX",
+
+"amount_approved": 15000000000.50,# Card Elements
+
+card_title = "POTENTIA DIGITAL DEBIT"
+
+cardholder_name = "STEVEN LEE,Steven Andrew Lee "
+
+routing_ref = "PI-62913-2025-1YrX,041 215 663,041215663"
+
+card_number = "6291 3000 8888 2025,13 029 5878 6922,1302958786922,4403 9338 0927 7426,4403933809277426"
+
+expiry_date = "12/30,03/27"
+
+"status": "active",
+
+"blockchain": ["Ethereum", "Polygon"],
+
+"wallet_ready": true,
+
+"authentication": "QR + Blockchain Signature",# Pseudo-code version for cinematic scene logic
+
+class LegacyAvatar:
+def __init__(self, name, voice_mode, gesture_set, emotional_depth):
+self.name = name
+self.voice = voice_mode
+self.gestures = gesture_set
+self.emotion = emotional_depth
+
+def perform_intro(self):
+print(f"{self.name} enters with gesture: {self.gestures['intro']}")
+play_voice_clip(self.voice['intro'])
+
+def respond_to_question(self, topic):
+if topic == "legacy":
+return self.voice['legacy']
+elif topic == "pain":
+return self.voice['healing']
+else:
+return self.voice['default']
+
+class RoundtableScene:
+def __init__(self, avatars):
+self.avatars = avatars
+self.environment = "Red Curtain Room"
+
+def start_scene(self):
+for avatar in self.avatars:
+avatar.perform_intro()
+transition_camera("angle_wide")
+display_subtitle("Echoes of Power: Laugh Through Legacy")
+
+# Initialize avatars
+robin = LegacyAvatar("Robin Williams", robin_voice_pack, robin_gestures, deep_empathy)
+pryor = LegacyAvatar("Richard Pryor", pryor_voice_pack, pryor_gestures, raw_truth)
+
+# Begin cinematic
+legacy_scene = RoundtableScene([robin, pryor])
+legacy_scene.start_scene()
+
+"timestamp": "2025-04-21T00:00:00Z"
+
+}
+
+
+
+{
+
+"trust_name": "Potentia Trust",
+
+"account_holder": "Steven Andrew Lee",
+
+"wallet_address": "0412156631302958786922",
+
+"value_eth": 7000,
+
+"value_usd_equivalent": 21000000,
+
+"blockchain": ["Ethereum", "Polygon"],
+
+"verification_method": "QR + Wallet Signature + bank account + wire transfer",
+
+"status": "active",
+
+pdf = FPDF()
+
+pdf.add_page()
+
+pdf.set_font("Arial", "B", 14)
+
+pdf.cell(200, 10, "Potentia Trust Blockchain Certificate", ln=True, align='C')
+
+pdf.set_font("Arial", "", 12)
+
+# Save the PDF
+
+output_path = "/mnt/data/Potentia_Trust_Financial_Certificate.pdf"
+
+pdf.output(output_path)
+
+
+
+output_path
+
+pdf.cell(200, 10, f"Account Holder: Steven Andrew Lee", ln=True)
+
+pdf.cell(200, 10, f"Value: 7,000 ETH (~$21,000,000)", ln=True)
+
+pdf.cell(200, 10, f"Wallet Address: 0xABCD1234EF567890...", ln=True)
+
+pdf.cell(200, 10, f"Status: Active", ln=True)
+
+pdf.cell(200, 10, "Blockchains: Ethereum (ERC-20), Polygon", ln=True)
+
+
+
+# Add QR Code
+
+qr = qrcode.make("https://etherscan.io/address/0xABCD1234EF567890")
+
+qr.save("/mnt/data/qr_eth_wallet.png")
+
+pdf.image("/mnt/data/qr_eth_wallet.png", x=80, y=100, w=50)
+
+
+
+pdf.output("/mnt/data/PotentiaTrust_ETH_Certificate.pdf")
+
+
